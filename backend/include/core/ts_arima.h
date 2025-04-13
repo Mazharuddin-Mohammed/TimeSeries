@@ -8,6 +8,7 @@ class ARIMA {
 public:
     ARIMA(int p, int d, int q);
     std::vector<double> fit(const std::vector<double>& data);
+    int get_p() const { return p_; }  // Added getter for p_
 
 private:
     int p_, d_, q_; // AR, differencing, MA orders

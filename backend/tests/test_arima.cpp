@@ -1,4 +1,4 @@
-#include <tsx/core/ts_arima.h>
+#include <core/ts_arima.h>
 #include <cassert>
 #include <vector>
 

@@ -6,7 +6,14 @@ add_library(tsx_core STATIC
     src/utils/matrix_ops.cpp
 )
 
-target_include_directories(tsx_core PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+# Ensure position-independent code for linking into shared objects
+set_target_properties(tsx_core PROPERTIES POSITION_INDEPENDENT_CODE ON)
+
+target_include_directories(tsx_core PUBLIC
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+    $<INSTALL_INTERFACE:include>
+)
+
 target_link_libraries(tsx_core PUBLIC ${CUDA_LIBRARIES} ${CUDA_cublas_LIBRARY})
 
 # Tests

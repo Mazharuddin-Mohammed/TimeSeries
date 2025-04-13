@@ -6,7 +6,7 @@ setup(
     packages=find_packages(),
     install_requires=["pybind11>=2.6"],
     package_data={"tsx": ["tsx_backend*.so"]},
-    author="Your Name",
+    author="Mazhar",
     description="Time Series Analysis Library",
     license="MIT",
 )
