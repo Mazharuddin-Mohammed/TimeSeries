@@ -3,7 +3,7 @@
 A time series analysis library with CUDA-accelerated C++ backend and Python frontend.
 
 ## Prerequisites
-- CMake 3.25+
+- CMake 3.22+
 - CUDA Toolkit 12.x
 - Python 3.8+
 - pybind11 (`pip install pybind11`)
