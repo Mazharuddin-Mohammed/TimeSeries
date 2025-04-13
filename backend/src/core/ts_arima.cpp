@@ -6,6 +6,7 @@
 #include <cstring>
 #include <algorithm>
 #include <cmath>
+#include <cstdlib>  // for getenv
 
 namespace tsx {
 ARIMA::ARIMA(int p, int d, int q) : p_(p), d_(d), q_(q) {
@@ -57,9 +58,13 @@ void ARIMA::solve_least_squares_gpu(double* X, double* y, int n, int p, double* 
     double *d_X = nullptr, *d_y = nullptr, *d_XtX = nullptr, *d_Xty = nullptr;
 
     try {
-        // Try to use GPU if available
+        // Check if we're in CI environment without GPU
+        const char* ci_no_gpu = std::getenv("CI_NO_GPU");
+        bool force_cpu = (ci_no_gpu != nullptr && std::string(ci_no_gpu) == "1");
+
+        // Try to use GPU if available and not forced to CPU
         cudaError_t cuda_status = cudaFree(0);  // Simple test to check if CUDA is available
-        bool use_gpu = (cuda_status == cudaSuccess);
+        bool use_gpu = !force_cpu && (cuda_status == cudaSuccess);
 
         if (use_gpu) {
             // Initialize cuBLAS

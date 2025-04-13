@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: nvidia/cuda:12.0.0-devel-ubuntu22.04
-      options: --gpus all
+      # Remove GPU options since GitHub Actions doesn't support GPU
 
     steps:
     - uses: actions/checkout@v3
@@ -21,6 +21,10 @@ jobs:
         apt-get update
         apt-get install -y cmake g++ python3-dev python3-pip git
         python3 -m pip install pybind11 pytest numpy
+
+    # Set environment variable to indicate we're in CI without GPU
+    - name: Set CI environment
+      run: echo "CI_NO_GPU=1" >> $GITHUB_ENV
 
     - name: Build
       run: |
@@ -34,7 +38,7 @@ jobs:
 
     - name: Test Python
       run: |
-        export PYTHONPATH=$PYTHONPATH:$(pwd)/frontend/tsx
+        export PYTHONPATH=$PYTHONPATH:$(pwd)/frontend
         python3 -m pytest frontend/tests/
 
   lint:
