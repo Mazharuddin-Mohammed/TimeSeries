@@ -1,3 +1,14 @@
+/**
+ * @file test_arima.cpp
+ * @brief Test file for the ARIMA model implementation.
+ *
+ * This file contains basic tests for the ARIMA model to verify
+ * that the implementation works correctly. It tests model creation
+ * and parameter estimation functionality.
+ *
+ * @author Mazharuddin Mohammed
+ */
+
 #include <core/ts_arima.h>
 #include <cassert>
 #include <vector>

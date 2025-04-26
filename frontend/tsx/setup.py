@@ -1,3 +1,14 @@
+"""
+@file setup.py
+@brief Setup script for the tsx Python package.
+
+This file contains the setup configuration for the tsx Python package,
+which provides a Python interface to the C++ TimeSeries library.
+It handles package metadata, dependencies, and installation.
+
+@author Mazharuddin Mohammed
+"""
+
 from setuptools import setup, find_packages
 
 setup(

@@ -1,3 +1,14 @@
+/**
+ * @file ts_arima.h
+ * @brief Header file for the ARIMA (AutoRegressive Integrated Moving Average) model implementation.
+ *
+ * This file defines the ARIMA class which provides time series forecasting capabilities
+ * with support for autoregressive (AR), differencing (I), and moving average (MA) components.
+ * The implementation leverages CUDA for GPU acceleration when available.
+ *
+ * @author Mazharuddin Mohammed
+ */
+
 #ifndef TS_ARIMA_H
 #define TS_ARIMA_H
 

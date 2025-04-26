@@ -1,3 +1,14 @@
+"""
+@file __init__.py
+@brief Python frontend for the TimeSeries library.
+
+This file provides the Python interface for the TimeSeries library,
+which includes the ARIMA model implementation. It handles importing
+the C++ extension module and provides a Pythonic wrapper around it.
+
+@author Mazharuddin Mohammed
+"""
+
 import os
 import sys
 import importlib.util

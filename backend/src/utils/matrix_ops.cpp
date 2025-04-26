@@ -1,3 +1,14 @@
+/**
+ * @file matrix_ops.cpp
+ * @brief Implementation of matrix operations utility functions.
+ *
+ * This file implements various matrix operations including matrix-vector multiplication,
+ * matrix-matrix multiplication, and solving linear systems using Gaussian elimination
+ * with partial pivoting. These functions support the ARIMA model implementation.
+ *
+ * @author Mazharuddin Mohammed
+ */
+
 #include <utils/matrix_ops.h>
 #include <stdexcept>
 #include <algorithm>

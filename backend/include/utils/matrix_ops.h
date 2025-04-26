@@ -1,3 +1,14 @@
+/**
+ * @file matrix_ops.h
+ * @brief Header file for matrix operations utility functions.
+ *
+ * This file provides utility functions for common matrix operations such as
+ * matrix-vector multiplication, matrix-matrix multiplication, and solving
+ * linear systems. These operations support the ARIMA model implementation.
+ *
+ * @author Mazharuddin Mohammed
+ */
+
 #ifndef TSX_MATRIX_OPS_H
 #define TSX_MATRIX_OPS_H
 

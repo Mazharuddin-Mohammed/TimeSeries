@@ -1,3 +1,14 @@
+"""
+@file test_arima.py
+@brief Test file for the Python ARIMA implementation.
+
+This file contains tests for the Python ARIMA implementation
+to verify that the Python bindings work correctly and the model
+produces expected results.
+
+@author Mazharuddin Mohammed
+"""
+
 import tsx
 import pytest
 

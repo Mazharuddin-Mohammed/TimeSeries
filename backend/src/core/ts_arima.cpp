@@ -1,3 +1,14 @@
+/**
+ * @file ts_arima.cpp
+ * @brief Implementation of the ARIMA (AutoRegressive Integrated Moving Average) model.
+ *
+ * This file implements the ARIMA class methods for time series forecasting.
+ * It includes functionality for data differencing, parameter estimation,
+ * and solving least squares problems with GPU acceleration when available.
+ *
+ * @author Mazharuddin Mohammed
+ */
+
 #include <core/ts_arima.h>
 #include <utils/matrix_ops.h>
 #include <cuda_runtime.h>

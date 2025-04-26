@@ -1,3 +1,14 @@
+/**
+ * @file tsx_bind.cpp
+ * @brief Python bindings for the C++ ARIMA implementation.
+ *
+ * This file creates Python bindings for the C++ ARIMA implementation
+ * using pybind11. It exposes the ARIMA class and its methods to Python,
+ * allowing seamless integration between the C++ backend and Python frontend.
+ *
+ * @author Mazharuddin Mohammed
+ */
+
 #include <pybind11/pybind11.h>
 #include <pybind11/stl.h>
 #include <core/ts_arima.h>
